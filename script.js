@@ -1,5 +1,5 @@
 const btnLogin = document.getElementById('btn-login');
-const btnEnviar = document.getElementById('submit-btn');
+const checkBox = document.getElementById('agreement');
 
 function validaLogin() {
   const inputEmail = document.getElementById('email-login');
@@ -11,13 +11,14 @@ function validaLogin() {
   }
 }
 
-function btnAtivar(elem) {
-  if (elem.checked === true) {
-    btnEnviar.disabled = false;
+function btnAtivar() {
+  const checkBoxNow = document.getElementById('agreement');
+  if (checkBoxNow.checked === true) {
+    document.getElementById('submit-btn').disabled = false;
   } else {
-    btnEnviar.disabled = true;
+    document.getElementById('submit-btn').disabled = true;
   }
 }
 
 btnLogin.addEventListener('click', validaLogin);
-btnEnviar.addEventListener('click', btnAtivar);
+checkBox.addEventListener('change', btnAtivar);
