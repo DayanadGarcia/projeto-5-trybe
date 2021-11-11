@@ -4,6 +4,10 @@
   justify-content: space-between;
 }
 
+#div-container {
+  display: flex;
+}
+
 .trybewarts-login {
   display: flex;
   align-items: center;
