@@ -1,23 +1,23 @@
-const btnLogin = document.getElementById("btn-login");
-const btnEnviar = document.getElementById("submit-btn");
-const checkBox = document.getElementById("agreement");
+const btnLogin = document.getElementById('btn-login');
+const checkBox = document.getElementById('agreement');
 
 function validaLogin() {
-  const inputEmail = document.getElementById("email-login");
-  const inputSenha = document.getElementById("senha-login");
-  if (inputEmail.value === "trybe@teste.com" || inputSenha.value === "123456") {
+  const inputEmail = document.getElementById('email-login');
+  const inputSenha = document.getElementById('senha-login');
+  if (inputEmail.value === 'trybe@teste.com' || inputSenha.value === '123456') {
     alert('Olá, Tryber!');
   } else {
-    alert("Email ou senha inválidos.");
+    alert('Email ou senha inválidos.');
   }
 }
-btnEnviar.disabled = true;
 function btnAtivar() {
-  if (checkBox.disable === false) {
-    btnEnviar.disabled = false;
-  } else if (checkBox.disable === true) {
-    btnEnviar.disable = true;
+  const checkBoxNow = document.getElementById('agreement');
+  if (checkBoxNow.checked === true) {
+    document.getElementById('submit-btn').disabled = false;
+  } else {
+    document.getElementById('submit-btn').disabled = true;
   }
 }
-btnLogin.addEventListener("click", validaLogin);
-btnEnviar.addEventListener("click", btnAtivar);
+
+btnLogin.addEventListener('click', validaLogin);
+checkBox.addEventListener('change', btnAtivar);
