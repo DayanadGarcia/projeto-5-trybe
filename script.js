@@ -109,7 +109,6 @@ function submit(event) {
 function contador(event) {
   const contagem = document.getElementById('counter');
   const tamanho = areaTexto.getAttribute('maxlength');
-  contagem.innerHTML = `0/${tamanho}`;
   const evento = event.target;
   const atualValor = evento.value.length;
   contagem.innerHTML = `${tamanho - atualValor}`;
