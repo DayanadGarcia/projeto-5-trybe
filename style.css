@@ -60,3 +60,6 @@ main {
 #agree-container {
   display: flex;
 }
+footer{
+  text-align: center;
+}
